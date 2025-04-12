@@ -1,11 +1,14 @@
+"use client";
+
 import { useState } from 'react';
+import { generateStudyPlan } from '@/services/studyPlannerService';
 
 interface StudyPlanResult {
   plan: string;
   loading: boolean;
   topic: string;
   setTopic: React.Dispatch<React.SetStateAction<string>>;
-  fetchStudyPlan: (topic: string) => Promise<void>;
+  fetchStudyPlan: (currentTopic: string) => Promise<void>;
 }
 
 const useStudyPlan = (): StudyPlanResult => {
@@ -20,21 +23,10 @@ const useStudyPlan = (): StudyPlanResult => {
     setPlan('');
 
     try {
-      const response = await fetch('/api/studyplanner', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic: currentTopic }),
-      });
-
-      const data = await response.json();
-      if (response.ok) {
-        setPlan(data.result);
-      } else {
-        console.error('Erro ao gerar plano:', data);
-        setPlan('Erro ao gerar plano. Tente novamente.');
-      }
-    } catch (error) {
-      console.error('Erro ao chamar API:', error);
+      const data = await generateStudyPlan(currentTopic);
+      setPlan(data.result);
+    } catch (error: unknown) {
+      console.error('Erro ao gerar plano:', error);
       setPlan('Erro ao gerar plano. Tente novamente.');
     } finally {
       setLoading(false);

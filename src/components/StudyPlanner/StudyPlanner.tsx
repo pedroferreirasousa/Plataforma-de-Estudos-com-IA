@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import './StudyPlanner.scss';
 import ReactMarkdown from 'react-markdown';
-import { useTopic } from '@/contexts/TopicContext'; // Ajuste o caminho se necessário
+import { useTopic } from '@/contexts/TopicContext';
 
 const StudyPlanner = () => {
   const { topic, setTopic } = useTopic();
