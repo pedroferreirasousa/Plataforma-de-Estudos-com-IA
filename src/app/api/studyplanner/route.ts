@@ -13,7 +13,7 @@ export async function POST(req: Request) {
           messages: [
             {
               role: 'user',
-              content: `Crie um plano de estudos para o tema: ${topic}, em forma de lista. bem explicativo e com exemplos e separando bem o titulo do plano de estudos e o conteudo.`,
+              content: `Crie um plano de estudos para o tema: ${topic}, em forma de lista. bem explicativo, com exemplos e separando bem o titulo do plano de estudos e o conteudo.`,
             },
           ],
         }),
