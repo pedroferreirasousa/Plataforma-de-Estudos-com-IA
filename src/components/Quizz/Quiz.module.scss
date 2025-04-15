@@ -4,35 +4,84 @@
   align-items: center;
   width: 100%;
   justify-content: space-around;
+  padding: 10px 0px;
 
   .startcontainer {
     display: flex;
     width: 100%;
-    min-height: 300px;
+    min-height: 280px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
     text-align: center;
 
+    h2{
+      color: var(--primary);
+    }
+
     span {
       font-size: 14px;
+      padding-bottom: 50px;
+    }
+
+  }
+
+  .containerFinished{
+    display: flex;
+    width: 100%;
+    min-height: 280px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .containerQuestion{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .containerButtons{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    .helpButton{
+      width: 35px;
+      height: 35px;
+      border-radius: 5px ;
+      border: none;
+      font-size: 24px;
+      color: var(--text);
+      background-color: var(--primary);
+      cursor: pointer;
+
+      &:hover{
+        background-color: var(--accent);
+      }
     }
   }
+
 }
 
 .quizButton {
   padding: 10px 20px;
-  margin-top: 15px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: var(--primary);
   color: white;
   font-size: 16px;
   cursor: pointer;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: var(--accent);
   }
 
   &:disabled {
@@ -50,29 +99,29 @@
   flex-direction: column;
   gap: 15px;
   margin-top: 20px;
-  width: 80%;
+  width: 100%;
 
   button {
     padding: 10px;
-    border: 1px solid #4800f0;
+    border: 1px solid var(--border);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
-    background-color: rgb(145, 145, 146);
+    background-color: #b6b6b6;
     font-size: 16px;
     cursor: pointer;
-
+    
     &:hover {
-      background-color: #0c97ce;
+      background-color: var(--primary);
     }
-
+    
     &:disabled {
-      background-color: #eeeeee;
+      // background-color: #eeeeee;
       cursor: not-allowed;
+      
     }
   }
-}
-
-.selected {
-  background-color: #d4edda;
-  border-color: #c3e6cb;
-  color: #155724;
+  .selected {
+    color: var(--text);
+    background-color: var(--accent);
+  }
 }

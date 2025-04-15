@@ -10,6 +10,7 @@
     .left {
         width: 80%;
         max-width: 600px;
+        min-width: 300px;
         background-color: var(--secondary);
         border-radius: 12px;
         box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
@@ -21,8 +22,9 @@
     }
 
     .right {
-        width: 300px;
-        max-width: 300px;
+        width: 80%;
+        max-width: 600px;
+        min-width: 300px;
         display: flex;
         flex-direction: column;
         padding: 0px 20px;
@@ -39,7 +41,11 @@
             font-size: 18px;
             width: 100%;
             text-align: center;
-            margin-bottom: 20px;
+            color: var(--text);
+            margin-top: 20px;
+        }
+
+        h2{
             color: var(--primary);
         }
     }

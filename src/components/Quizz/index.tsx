@@ -47,20 +47,21 @@ const Quiz = () => {
 
   return (
     <div className={styles.container}>
-      {quizFinished && (
-        <div>
+      {quizFinished ? (
+        <div className={styles.containerFinished}>
           <h2>Quiz Finalizado!</h2>
           <p>Sua pontuação: {score} de {questions.length}</p>
           <button onClick={restartQuiz} className={styles.quizButton}>Reiniciar Quiz</button> {/* Use the 'quizButton' style */}
         </div>
-      )}
+      ) : (
+        <>
       {isFetchingQuestions && <p>Carregando perguntas...</p>}
       {!currentQuestion && quizStarted && !isFetchingQuestions && questions.length > 0 && <p>Nenhuma pergunta disponível no momento.</p>}
-      {!currentQuestion && quizStarted && !isFetchingQuestions && questions.length === 0 && <p>Nenhuma pergunta carregada.</p>}
+      {!currentQuestion && quizStarted && !isFetchingQuestions && questions.length === 0 && <p>Selecione um tema antes de iniciar o quizz</p>}
       {currentQuestion && (
-        <div>
+        <div className={styles.containerQuestion}>
           <h2>Pergunta {currentQuestionIndex + 1}</h2>
-          <p>{currentQuestion.question}</p>
+          <p className={styles.pQuestion}>{currentQuestion.question}</p>
           <div className={styles.options}>
             {currentQuestion.options.map((option) => (
               <button
@@ -73,15 +74,19 @@ const Quiz = () => {
               </button>
             ))}
           </div>
+          <div className={styles.containerButtons}>
           <button onClick={nextQuestion} disabled={selectedAnswer === null} className={styles.quizButton}>
             Próxima Pergunta
           </button>
-          <button onClick={() => getHelp(currentQuestion)} disabled={isAskingHelp || helpMessage !== null} className="helpButton"> {/* Use the 'quizButton' style */}
+          <button onClick={() => getHelp(currentQuestion)} disabled={isAskingHelp || helpMessage !== null} className={styles.helpButton}>
             {isAskingHelp ? 'Buscando Ajuda...' : helpMessage || '?'}
           </button>
+          </div>
           {error && <p className={styles.error}>{error}</p>}
         </div>
       )}
+    </>
+    )}
     </div>
   );
 };
