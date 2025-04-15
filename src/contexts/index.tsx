@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import {TopicProvider} from './TopicContext';
+import { TopicProvider } from './TopicContext';
+import { QuizProvider } from './QuizContext';
 
 
 interface AppProvidersProps {
@@ -9,7 +10,9 @@ interface AppProvidersProps {
 const AppProviders: React.FC<AppProvidersProps> = ({ children }) => {
     return (
         <TopicProvider>
-            {children}
+            <QuizProvider>
+                {children}
+            </QuizProvider>
         </TopicProvider>
 
     );
