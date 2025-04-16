@@ -36,7 +36,7 @@ const Quiz = () => {
         {!quizStarted && (
           <div className={styles.startcontainer}>
             <h2>Vamos fazer um Quiz?</h2>
-            <span>selecione um tema antes de iniciar</span>
+            <span>Selecione um tema antes de iniciar</span>
             <button onClick={startQuiz} className={styles.quizButton}>Iniciar Quiz</button>
             {error && <p className={styles.error}>{error}</p>}
           </div>

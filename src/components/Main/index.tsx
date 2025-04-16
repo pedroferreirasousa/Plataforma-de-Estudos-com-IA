@@ -6,10 +6,10 @@ import styles from './Main.module.scss';
 function Main() {
     return (
         <div className={styles.container}>
-            <div className={styles.left}>
+            <div id='planner' className={styles.left}>
                 <StudyPlanner />
             </div>
-            <div className={styles.right}>
+            <div id='quiz' className={styles.right}>
                 <Quiz />
             </div>
         </div>

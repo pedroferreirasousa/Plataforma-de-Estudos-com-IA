@@ -4,25 +4,27 @@
   align-items: center;
   width: 100%;
   justify-content: space-around;
-  padding: 10px 0px;
+  // padding: 10px 0px;
 
   .startcontainer {
+    padding: 2rem;
     display: flex;
     width: 100%;
-    min-height: 280px;
+    min-height: 300px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     gap: 10px;
     text-align: center;
 
     h2{
       color: var(--primary);
+      font-size: 2rem;
     }
 
     span {
-      font-size: 14px;
-      padding-bottom: 50px;
+      font-size: 16px;
+      padding-bottom: 70px;
     }
 
   }
