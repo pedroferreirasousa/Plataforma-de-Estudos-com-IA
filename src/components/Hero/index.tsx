@@ -11,7 +11,7 @@ const Hero = () => {
         <section className={styles.sectionHero}>
             <video
                 autoPlay={true} muted={true} playsInline loop={true} className={styles.videoHero}>
-                <source src='/videos/herovideo.mp4' type="video/mp4" />
+                <source src='/videos/herovideo2.mp4' type="video/mp4" />
             </video>
             <div className={styles.containerHero}>
                 <Image src={svg} alt="logo" width={300} height={300} />
