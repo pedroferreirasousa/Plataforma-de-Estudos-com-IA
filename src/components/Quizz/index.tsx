@@ -14,14 +14,13 @@ const Quiz = () => {
     quizStarted,
     quizFinished,
     error,
-    helpMessage,
     startQuiz,
     selectAnswer,
     nextQuestion,
     restartQuiz,
   } = UseQuizContext();
 
-  const { isFetchingQuestions, isAskingHelp, getHelp } = useQuiz();
+  const { isFetchingQuestions } = useQuiz();
 
   const currentQuestion = questions[currentQuestionIndex];
 
@@ -77,9 +76,6 @@ const Quiz = () => {
           <div className={styles.containerButtons}>
           <button onClick={nextQuestion} disabled={selectedAnswer === null} className={styles.quizButton}>
             Próxima Pergunta
-          </button>
-          <button onClick={() => getHelp(currentQuestion)} disabled={isAskingHelp || helpMessage !== null} className={styles.helpButton}>
-            {isAskingHelp ? 'Buscando Ajuda...' : helpMessage || '?'}
           </button>
           </div>
           {error && <p className={styles.error}>{error}</p>}

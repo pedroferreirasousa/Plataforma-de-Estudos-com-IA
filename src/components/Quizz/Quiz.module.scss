@@ -4,7 +4,6 @@
   align-items: center;
   width: 100%;
   justify-content: space-around;
-  // padding: 10px 0px;
 
   .startcontainer {
     padding: 2rem;
@@ -17,7 +16,7 @@
     gap: 10px;
     text-align: center;
 
-    h2{
+    h2 {
       color: var(--primary);
       font-size: 2rem;
     }
@@ -26,10 +25,9 @@
       font-size: 16px;
       padding-bottom: 70px;
     }
-
   }
 
-  .containerFinished{
+  .containerFinished {
     display: flex;
     width: 100%;
     min-height: 280px;
@@ -40,37 +38,22 @@
     text-align: center;
   }
 
-  .containerQuestion{
+  .containerQuestion {
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
 
-  .containerButtons{
+  .containerButtons {
     margin-top: 20px;
     display: flex;
     width: 100%;
     gap: 20px;
     align-items: center;
     justify-content: center;
-
-    .helpButton{
-      width: 35px;
-      height: 35px;
-      border-radius: 5px ;
-      border: none;
-      font-size: 24px;
-      color: var(--text);
-      background-color: var(--primary);
-      cursor: pointer;
-
-      &:hover{
-        background-color: var(--accent);
-      }
-    }
+    padding-bottom: 16px;
   }
-
 }
 
 .quizButton {
@@ -111,15 +94,16 @@
     background-color: #b6b6b6;
     font-size: 16px;
     cursor: pointer;
-    
+    width: 80%;
+    margin: 0 auto;
+
     &:hover {
       background-color: var(--primary);
     }
-    
+
     &:disabled {
       // background-color: #eeeeee;
       cursor: not-allowed;
-      
     }
   }
   .selected {
