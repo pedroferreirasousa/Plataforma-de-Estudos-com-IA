@@ -4,11 +4,12 @@
     justify-content: center;
     width: 100vw;
     height: auto;
-    min-height: 100vh;
+    min-height: 90vh;
     flex-direction: column;
 
     .logo {
         margin: 0 auto;
+        padding-bottom: 32px;
     }
 
     .container {
@@ -16,7 +17,7 @@
         width: 100vw;
         max-width: 1220px;
         justify-content: center;
-        gap: 20px;
+        gap: 16px;
         flex-wrap: wrap;
         align-items: start;
     
