@@ -10,12 +10,5 @@ export default function Home() {
         <Hero />
       </main>
     </div>
-    // <div className={styles.page}>
-    //   <main className={styles.main}>
-    //     <Main />
-    //   </main>
-    //   <footer className={styles.footer}>
-    //   </footer>
-    // </div>
   );
 }
