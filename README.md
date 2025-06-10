@@ -56,7 +56,7 @@ Certifique-se de ter o Node.js e o npm (ou yarn) instalados em sua máquina.
 
 1.  **Clone o Repositório:**
     ```bash
-    git clone `https://github.com/pedroferreirasousa/Plataforma-de-Estudos-com-IA.git`
+    git clone https://github.com/pedroferreirasousa/Plataforma-de-Estudos-com-IA.git
     ```
     * **Nota:** Lembre-se de substituir `[URL_DO_SEU_REPOSITORIO_AQUI]` pela URL real do seu repositório Git (ex: `https://github.com/seu-usuario/studiapro.git`).
 
