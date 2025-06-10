@@ -1,0 +1,19 @@
+
+.footer {
+    margin: 0 auto;
+
+    .p{
+        color: var(--text);
+
+        a{
+            color: var(--primary);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                color: var(--accent);
+            }
+        }
+    }
+}
