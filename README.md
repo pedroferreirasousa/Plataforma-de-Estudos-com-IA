@@ -89,5 +89,5 @@ Certifique-se de ter o Node.js e o npm (ou yarn) instalados em sua máquina.
 ## 📧 Contato
 
 * **Pedro Ferreira**
-* **LinkedIn:** `https://www.linkedin.com/in/pedrofsousa`
-* **GitHub:** `https://github.com/pedroferreirasousa`
+* **LinkedIn:** [https://www.linkedin.com/in/pedrofsousa](https://www.linkedin.com/in/pedrofsousa).
+* **GitHub:** [https://github.com/pedroferreirasousa](https://github.com/pedroferreirasousa)
