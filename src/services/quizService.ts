@@ -1,4 +1,3 @@
-// src/services/quizService.ts
 import { Question } from '@/contexts/QuizContext';
 
 const API_BASE_URL = '/api';
